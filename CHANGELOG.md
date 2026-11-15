@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.1](https://github.com/aifivem/aicore-server/compare/v0.5.0...v0.5.1) (2026-11-15)
+
+
+### Documentation
+
+* **claude:** NUI rules for Chromium 144 - native Tailwind v4, split transforms, WAAPI springs, focused clipboard copy, bun runtime ([03b1456](https://github.com/aifivem/aicore-server/commit/03b1456f12fe8635c715d63a1e1b134fa34886b3))
+* run audits after larger changes, say where cross-script rules are recorded ([de03149](https://github.com/aifivem/aicore-server/commit/de03149c124067bcbb6c05b0d271b2d4976c594c))
+
 ## [0.5.0](https://github.com/aifivem/aicore-server/compare/v0.4.0...v0.5.0) (2026-11-06)
 
 
