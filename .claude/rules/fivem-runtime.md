@@ -50,6 +50,8 @@ ai-* resources never import ox_lib (owner decision); the lib covers what ox_lib 
 
 - On the server, return to the game thread with `setImmediate` before calling a native inside a Node callback (fs, http, Node timers), or it fails with "No current resource manager".
 - Periodic work on either side runs on the resource's one scheduler: lib `every(ms, fn)` (0 = every frame), never `setInterval` / `setTick` (`lib.md` "Periodic work"). Server jobs run on the game thread, so natives work in them.
+- An every-frame job (`every(0, ...)`) holds only what must run each frame (`*ThisFrame` natives, `Draw*`, `DisableControlAction`); state reads and calculations run in a slower job and the frame job reads their result. Each native call crosses into the engine; plain JS math is cheaper.
+- Distance is plain math (`Math.hypot(ax - bx, ay - by, az - bz)`), never `GetDistanceBetweenCoords` / `Vdist` / `Vdist2`.
 - Client code has no DOM/Node APIs (fs, Buffer, localStorage, fetch); packages using them never enter the client bundle.
 - Never write bare `exports` in source and never `export` a value from an entry file (the script shows "Started" but does not load). Use `registerExport(name, fn)` and a top-level `const core = resourceExport("ai-core")` from `@aifivem/lib` (`lib.md` "Exports of other resources").
 
