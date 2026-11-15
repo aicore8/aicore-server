@@ -6,13 +6,13 @@ Read before writing any animation, timer or loop in a NUI, or when a NUI stutter
 
 - FiveM runs every resource's `ui_page` as an iframe of one root page: **all NUIs of the server share one renderer process and one main thread**. A HUD or inventory doing work in a frame takes that frame from every other NUI.
 - The root browser renders at 240 fps (about 4 ms per frame for everyone).
-- CEF is Chromium 103: no CSS `linear()` easing, no individual `scale` / `rotate` / `translate` properties, no View Transitions, no ScrollTimeline; `clip-path` animations are not composited.
-- Only the compositor thread keeps running while the main thread is busy. WAAPI on `transform` / `opacity` with a tween stays smooth; Motion springs, `x`/`y`/`scale` shorthand, motion values and rAF loops are main-thread work.
+- CEF is Chromium 144 (since 3-4 Nov 2026): CSS `linear()` easing, individual `scale` / `rotate` / `translate` properties, View Transitions and ScrollTimeline exist. `clip-path` animations were not composited on 103 (not retested): keep them off large layers.
+- Only the compositor thread keeps running while the main thread is busy. WAAPI on literal `transform` / `opacity` stays smooth, with a tween or a spring (Motion compiles the spring to `linear()`, motion-dom `applyGeneratorOptions`); `x`/`y`/`scale` shorthand, motion values and rAF loops are main-thread work.
 
 ## Rules
 
-1. Full-screen and frequent moves run on the compositor: literal `transform` (and `opacity`) targets with a tween. Never `type: "spring"` for them (in CEF it runs in JS).
-2. Springs become `glide(response, bounce)`: the spring fitted to a cubic-bezier tween (table below).
+1. Full-screen, frequent and endless moves run on the compositor: literal `transform` (and `opacity`) targets, spring or tween. `repeatDelay`, `onUpdate`, `transformTemplate` and `inertia` force Motion's JS animator: an endless loop holds its last keyframe for the pause instead of `repeatDelay`.
+2. Springs: `{ type: "spring", duration, bounce }` for UI moves; the physics form `springV(response, bounce)` (below) when a gesture hands its velocity over (a duration-based spring drops inherited velocity, motion-dom `spring.mjs`).
 3. One transform function list per element: every state writes the same functions in the same order.
 4. Drag and compositor move never share an element: the enter/exit slide on an outer wrapper, the drag offset on an inner element. Gesture releases that carry velocity keep a JS spring.
 5. No animated `clip-path` on large layers.
@@ -21,36 +21,29 @@ Read before writing any animation, timer or loop in a NUI, or when a NUI stutter
 8. `[contain:layout_paint]` on clipped full-screen containers (not on elements whose shadow paints outside).
 9. Small hover/press colour transitions stay CSS.
 
-## `glide` curves
-
-Duration = `response × settle`.
-
-| bounce | settle / response | cubic-bezier |
-|---|---|---|
-| 0 | 1.182 | 0.22, 0.189, 0.141, 1.034 |
-| 0.05 | 1.028 | 0.23, 0.153, 0.179, 1.011 |
-| 0.1 | 0.871 | 0.229, 0.098, 0.248, 0.985 |
-| 0.15 | 1.077 | 0.239, 0.18, 0.164, 1.145 |
-| 0.2 | 1.148 | 0.262, 0.263, 0.128, 1.198 |
-| 0.3 | 1.112 | 0.293, 0.325, 0.123, 1.281 |
+## Springs
 
 ```ts
-const glide = (response: number, bounce = 0): Transition => {
-  let best = GLIDE_CURVES[0];
-  for (const c of GLIDE_CURVES) if (Math.abs(c[0] - bounce) < Math.abs(best[0] - bounce)) best = c;
-  return { type: "tween", duration: response * best[1], ease: best[2] };
-};
+/** Apple-style spring from response (seconds) and bounce. */
+const springV = (response: number, bounce = 0): Transition => ({
+  type: "spring",
+  stiffness: (2 * Math.PI / response) ** 2,
+  damping: (4 * Math.PI * (1 - bounce)) / response,
+  mass: 1,
+});
 ```
 
-Typical values: push 0.45/0, sheet and modal 0.5/0, alert 0.3/0, menu 0.35/0.2, pop 0.35/0.3, toast 0.45/0.25.
+Typical `springV` values: push 0.45/0, sheet and modal 0.5/0, alert 0.3/0, menu 0.35/0.2, pop 0.35/0.3, toast 0.45/0.25. A spring takes two keyframes; a multi-keyframe loop is a tween.
 
 ## Motion feel
 
 - Bounce 0 by default; hover and press 150 ms; enters 200-300 ms; exits shorter and along the same path; feedback on pointer-down; never lock input during a transition; one sliding selection indicator per group.
-- Push: `initial={{ transform: "translateX(100%)" }} animate={{ transform: "translateX(0%)" }} exit={{ transform: "translateX(100%)" }} transition={glide(0.45)}`.
-- Pop / menu: `{ opacity: 0, transform: "scale(0.6)" }` → `{ opacity: 1, transform: "scale(1)" }`, exit as a short tween. A centred element keeps its translate inside the same string: `"translate(-50%, -50%) scale(0)"`.
+- Push: `initial={{ transform: "translateX(100%)" }} animate={{ transform: "translateX(0%)" }} exit={{ transform: "translateX(100%)" }} transition={springV(0.45)}`.
+- Pop / menu: `{ opacity: 0, transform: "scale(0.6)" }` → `{ opacity: 1, transform: "scale(1)" }`, exit as a short tween. A centred element is centred by the translate utilities (`-translate-x-1/2 -translate-y-1/2`, they compose with `transform`) and Motion animates only `scale(...)`; never repeat the offset in the string.
 - Pixel moves stay pixels on both ends, `%` stays `%`.
 - Do not use `layout` / `layoutId` on big elements (small tab pills are fine).
+- Motion owns the inline `opacity` / `transform` of an element it animates: a CSS `hover:opacity-*` or `transition-opacity` on it never shows or smears the enter. Use `whileHover` / `whileTap`, or put the CSS state on an inner element.
+- A press scale needs a transition that names it: `transition`, `transition-transform` or a list with `scale`; `transition-colors` snaps.
 
 ## Loops, measurements, images
 

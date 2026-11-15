@@ -5,11 +5,11 @@ paths:
 
 # NUI
 
-Every NUI follows the `aicore-ui` skill (owner decision): stack, vh scale, old-CEF limits, shared-renderer performance, motion and UX rules. Every screen looks like a TGIANN sibling: `docs/design.md` holds the token block, the display font, the panel and component recipes and which reference picture each screen copies. Transport and React architecture: snapshot + delta through `fivem-nui-react`.
+Every NUI follows the `aicore-ui` skill (owner decision): stack, vh scale, CEF 144 limits, shared-renderer performance, motion and UX rules. Every screen looks like a TGIANN sibling: `docs/design.md` holds the token block, the display font, the panel and component recipes and which reference picture each screen copies. Transport and React architecture: snapshot + delta through `fivem-nui-react`.
 
 ## Stack (every ai-* NUI)
 
-- React 19 + Vite + TypeScript, Tailwind v4 with the vh `@theme inline` override (`10px = 1vh`) and the CEF 103 postcss chain.
+- React 19 + Vite + TypeScript, Tailwind v4 with the vh `@theme inline` override (`10px = 1vh`) and `@custom-variant hover (&:hover);`; no postcss chain (CEF 144 runs Tailwind v4 output as it is). Vite runs on the bun runtime: `"dev": "bunx --bun vite"`, `"build": "tsc --noEmit && bunx --bun vite build"`.
 - shadcn/ui on Radix (`radix-ui` package): every control Radix has (Slider, Tabs, ScrollArea, Tooltip, Dialog, Popover, DropdownMenu, Select, Switch, ToggleGroup...) lives in `web/src/components/ui/<name>.tsx`, re-skinned with the TGIANN tokens in vh; never hand-written. `cn()` (clsx + tailwind-merge) and class-variance-authority for variants.
 - TanStack: Router (`@tanstack/react-router`, `createMemoryHistory`, preview seeded from the hash) for which screen or tab is open in any NUI with tabs or sub screens; Virtual (`@tanstack/react-virtual`, a `VirtualList`) for every scrolling list of data; Pacer (`@tanstack/react-pacer`) for throttle and debounce.
 - Redux Toolkit for the screen's data (snapshot + deltas); the router holds only the location.
