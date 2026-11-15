@@ -43,7 +43,7 @@ What the official documentation (docs.fivem.net) says that affects how we build,
 
 ## Security
 
-- Use `AddEventHandler` for same-side events and `RegisterNetEvent` / `onNet` only for cross-network ones. A registered net event can still be called from the same side; on the client, server-sent events have `source == 65535`, so a client handler can reject anything else.
+- Use `AddEventHandler` for same-side events and `RegisterNetEvent` / `onNet` only for cross-network ones. A registered net event can still be called from the same side; the page has a client handler reject anything but `source == 65535`, but a latent server event arrives with source 0 and a local emit with a string, so the test is "source is a number" (lib `fromServer`, `runtime.md`); the page calls it "not bullet proof".
 - Never trust client values: re-read money, items, position, permissions on the server. Reference pattern: the server tracks the job state per source (start in range → server tick counts progress → turn-in in range clears the state before rewarding the server-tracked amount).
 - `source` is only valid until the first `Wait` / `await`; copy it to a local first.
 - Security convars (most on by default since build 8450): `sv_kick_players_cnl_timeout_sec`, `sv_pure_verify_client_settings`, `sv_authMaxVariance` (1-5, default 5, lower = more stable ids), `sv_authMinTrust` (1-5, default 1), `sv_filterRequestControl`, `sv_disableClientReplays` (also disables the Rockstar Editor).
