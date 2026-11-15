@@ -13,7 +13,7 @@
     },
     "packages/build": {
       "name": "@aifivem/build",
-      "version": "0.1.4",
+      "version": "0.2.1",
       "bin": {
         "aicore-client-errors": "./clientErrors.ts",
         "aicore-db-types": "./dbTypes.ts",
@@ -27,10 +27,10 @@
     },
     "packages/lib": {
       "name": "@aifivem/lib",
-      "version": "0.6.0",
+      "version": "0.8.0",
       "dependencies": {
-        "@aifivem/mysql": "^0.1.0",
-        "@aifivem/shared": "^0.5.0",
+        "@aifivem/mysql": "^0.2.0",
+        "@aifivem/shared": "^0.7.0",
       },
       "devDependencies": {
         "@citizenfx/client": "latest",
@@ -40,7 +40,7 @@
     },
     "packages/mysql": {
       "name": "@aifivem/mysql",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "dependencies": {
         "mysql2": "3.24.5",
       },
@@ -51,7 +51,7 @@
     },
     "packages/shared": {
       "name": "@aifivem/shared",
-      "version": "0.5.0",
+      "version": "0.7.0",
       "devDependencies": {
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
@@ -59,7 +59,7 @@
     },
     "resources/[ai]/ai-admin": {
       "name": "ai-admin",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -80,7 +80,7 @@
     },
     "resources/[ai]/ai-appearance": {
       "name": "ai-appearance",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -124,13 +124,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -138,7 +135,7 @@
     },
     "resources/[ai]/ai-banking": {
       "name": "ai-banking",
-      "version": "0.1.3",
+      "version": "0.2.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -182,13 +179,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -196,7 +190,7 @@
     },
     "resources/[ai]/ai-chat": {
       "name": "ai-chat",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -239,13 +233,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -253,7 +244,7 @@
     },
     "resources/[ai]/ai-cityhall": {
       "name": "ai-cityhall",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -288,13 +279,10 @@
         "react-dom": "^19.2.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -302,7 +290,7 @@
     },
     "resources/[ai]/ai-core": {
       "name": "ai-core",
-      "version": "0.5.0",
+      "version": "0.6.1",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -347,13 +335,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -361,7 +346,7 @@
     },
     "resources/[ai]/ai-death": {
       "name": "ai-death",
-      "version": "0.4.0",
+      "version": "0.4.2",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -404,13 +389,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -418,7 +400,7 @@
     },
     "resources/[ai]/ai-doorlock": {
       "name": "ai-doorlock",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -439,7 +421,7 @@
     },
     "resources/[ai]/ai-drugs": {
       "name": "ai-drugs",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -461,7 +443,7 @@
     },
     "resources/[ai]/ai-exitsleeping": {
       "name": "ai-exitsleeping",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -483,7 +465,7 @@
     },
     "resources/[ai]/ai-fuel": {
       "name": "ai-fuel",
-      "version": "0.1.3",
+      "version": "0.2.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -504,7 +486,7 @@
     },
     "resources/[ai]/ai-garages": {
       "name": "ai-garages",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -547,13 +529,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -561,7 +540,7 @@
     },
     "resources/[ai]/ai-hud": {
       "name": "ai-hud",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -604,13 +583,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -618,7 +594,7 @@
     },
     "resources/[ai]/ai-inventory": {
       "name": "ai-inventory",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -662,13 +638,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -676,7 +649,7 @@
     },
     "resources/[ai]/ai-jobs": {
       "name": "ai-jobs",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -697,7 +670,7 @@
     },
     "resources/[ai]/ai-lib": {
       "name": "ai-lib",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -736,13 +709,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -750,7 +720,7 @@
     },
     "resources/[ai]/ai-loading": {
       "name": "ai-loading",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -787,13 +757,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -801,7 +768,7 @@
     },
     "resources/[ai]/ai-management": {
       "name": "ai-management",
-      "version": "0.2.0",
+      "version": "0.2.2",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -822,7 +789,7 @@
     },
     "resources/[ai]/ai-mechanic": {
       "name": "ai-mechanic",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -843,7 +810,7 @@
     },
     "resources/[ai]/ai-mysql": {
       "name": "ai-mysql",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -864,7 +831,7 @@
     },
     "resources/[ai]/ai-pawnshop": {
       "name": "ai-pawnshop",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -885,7 +852,7 @@
     },
     "resources/[ai]/ai-pedscale": {
       "name": "ai-pedscale",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -906,7 +873,7 @@
     },
     "resources/[ai]/ai-police": {
       "name": "ai-police",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -927,7 +894,7 @@
     },
     "resources/[ai]/ai-policealert": {
       "name": "ai-policealert",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -970,13 +937,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -984,7 +948,7 @@
     },
     "resources/[ai]/ai-prison": {
       "name": "ai-prison",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1005,7 +969,7 @@
     },
     "resources/[ai]/ai-properties": {
       "name": "ai-properties",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -1027,7 +991,7 @@
     },
     "resources/[ai]/ai-radialmenu": {
       "name": "ai-radialmenu",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1070,13 +1034,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -1084,7 +1045,7 @@
     },
     "resources/[ai]/ai-rental": {
       "name": "ai-rental",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1105,7 +1066,7 @@
     },
     "resources/[ai]/ai-robberies": {
       "name": "ai-robberies",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1126,7 +1087,7 @@
     },
     "resources/[ai]/ai-scoreboard": {
       "name": "ai-scoreboard",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1169,13 +1130,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -1183,7 +1141,7 @@
     },
     "resources/[ai]/ai-sirens": {
       "name": "ai-sirens",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1204,7 +1162,7 @@
     },
     "resources/[ai]/ai-smallresources": {
       "name": "ai-smallresources",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1225,7 +1183,7 @@
     },
     "resources/[ai]/ai-streetraces": {
       "name": "ai-streetraces",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1246,7 +1204,7 @@
     },
     "resources/[ai]/ai-target": {
       "name": "ai-target",
-      "version": "0.2.2",
+      "version": "0.2.4",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1284,13 +1242,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -1298,7 +1253,7 @@
     },
     "resources/[ai]/ai-vehiclekeys": {
       "name": "ai-vehiclekeys",
-      "version": "0.1.3",
+      "version": "0.2.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1319,7 +1274,7 @@
     },
     "resources/[ai]/ai-vehicles": {
       "name": "ai-vehicles",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -1341,7 +1296,7 @@
     },
     "resources/[ai]/ai-vehiclesales": {
       "name": "ai-vehiclesales",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/mysql": "workspace:*",
@@ -1385,13 +1340,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -1399,7 +1351,7 @@
     },
     "resources/[ai]/ai-vehicleshop": {
       "name": "ai-vehicleshop",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1442,13 +1394,10 @@
         "tailwind-merge": "^3.5.0",
       },
       "devDependencies": {
-        "@csstools/postcss-color-mix-function": "^4.0.2",
-        "@csstools/postcss-oklab-function": "^5.0.2",
         "@tailwindcss/vite": "^4.2.1",
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react": "^5.1.1",
-        "postcss-color-functional-notation": "^8.0.2",
         "tailwindcss": "^4.2.1",
         "typescript": "^6.0.3",
         "vite": "^7.3.1",
@@ -1456,7 +1405,7 @@
     },
     "resources/[ai]/ai-voice": {
       "name": "ai-voice",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1477,7 +1426,7 @@
     },
     "resources/[ai]/ai-weathersync": {
       "name": "ai-weathersync",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "dependencies": {
         "@aifivem/lib": "workspace:*",
         "@aifivem/shared": "workspace:*",
@@ -1566,27 +1515,9 @@
 
     "@babel/types": ["@babel/types@7.29.11", "", { "dependencies": { "@babel/helper-string-parser": "^7.29.11", "@babel/helper-validator-identifier": "^7.29.7" } }, "sha512-WCsemW40Cpc6gouC1SrY6PBaZ+oLRlEVY9XBvZBI7il/HyUrb2nJ505wE1MHEFyDZNnrWDEuy4jL50WVHfTTSQ=="],
 
-    "@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+    "@citizenfx/client": ["@citizenfx/client@2.0.38621-1", "", {}, "sha512-aneJlHWdNA+Y3XD6d+kLyGl4zp21LBHq6p9WaK5JUqZJzDk7USW4DTgADGswsm1pwp3aeD5frDesx1I3ROvdjw=="],
 
-    "@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "@csstools/color-helpers": ["@csstools/color-helpers@6.1.2", "", {}, "sha512-grhRy3OKmniaAEKXMjua5z/EODX0MSqBGjunw8+j/3HQjOnahs2AGhvEOIYVUWcU6ScApbhLhVrQTX8XqrMrow=="],
-
-    "@csstools/css-calc": ["@csstools/css-calc@3.4.3", "", { "peerDependencies": { "@csstools/css-parser-algorithms": "^4.0.2", "@csstools/css-tokenizer": "^4.0.2" } }, "sha512-iex20d8CHVkyvg6B7UKV7uHnI2Bqo9g+EFfT9E0y+GvTvhZ/DwONJ+9aKb1dlqm0ZiGsL5RXjp0fCoJYnkeDjA=="],
-
-    "@csstools/css-color-parser": ["@csstools/css-color-parser@4.2.7", "", { "dependencies": { "@csstools/color-helpers": "^6.1.2", "@csstools/css-calc": "^3.4.3" }, "peerDependencies": { "@csstools/css-parser-algorithms": "^4.0.2", "@csstools/css-tokenizer": "^4.0.2" } }, "sha512-zgm9yjQz5iJB4VL8RyVwd71TWB8Q89FSxt/NzXoWqPSkEBOVtn9L6vAPtSc9hpKfB0Awo/AL2VKFHjYetBLFHQ=="],
-
-    "@csstools/css-parser-algorithms": ["@csstools/css-parser-algorithms@4.0.2", "", { "peerDependencies": { "@csstools/css-tokenizer": "^4.0.2" } }, "sha512-40cSKyMvK+tq4qz6Awrlye2WGuOKt3FwPgtGg6KTfbHOWNw+Rk1rzbAtZnZ6IBhsY491HLRnDXwoyBAijmmILA=="],
-
-    "@csstools/css-tokenizer": ["@csstools/css-tokenizer@4.0.2", "", {}, "sha512-OoKoR0f76dCY666JlcbhmVTs2drYj1GUXZTYTcbUgJjh9Nv41aFfZ21bPQTERm5+L5cBDo466NltB2lplS5GBw=="],
-
-    "@csstools/postcss-color-mix-function": ["@csstools/postcss-color-mix-function@4.0.15", "", { "dependencies": { "@csstools/css-color-parser": "^4.2.6", "@csstools/css-parser-algorithms": "^4.0.2", "@csstools/css-tokenizer": "^4.0.2", "@csstools/postcss-progressive-custom-properties": "^5.1.4", "@csstools/utilities": "^3.0.0" }, "peerDependencies": { "postcss": "^8.4" } }, "sha512-ynv9c9Nm2hoTLh4wugkITdolppBQnJ42ot2Rx5bY/Ndwrm9+D7hYjdAxSwJ3fCv1kWWoIY+475kV7Y4kUheVMg=="],
-
-    "@csstools/postcss-oklab-function": ["@csstools/postcss-oklab-function@5.0.15", "", { "dependencies": { "@csstools/css-color-parser": "^4.2.6", "@csstools/css-parser-algorithms": "^4.0.2", "@csstools/css-tokenizer": "^4.0.2", "@csstools/postcss-progressive-custom-properties": "^5.1.4", "@csstools/utilities": "^3.0.0" }, "peerDependencies": { "postcss": "^8.4" } }, "sha512-X4irLkH3nP+r4PW8dTxFwCdcYPM6DZdZulmgvk1NdMO+8xeB/G/alX47DZwOdvZ9/Erd2IqLvKdXK+pHzfa/5g=="],
-
-    "@csstools/postcss-progressive-custom-properties": ["@csstools/postcss-progressive-custom-properties@5.1.5", "", { "dependencies": { "postcss-value-parser": "^4.2.0" }, "peerDependencies": { "postcss": "^8.4" } }, "sha512-/H7shtJWwo2afnoH3IEYDD0rqxFV5T9WaUQf8PWkoHAlKrJWGR+nNQXf7EuERavt6l91eoJQAzJButsHXXwb6Q=="],
-
-    "@csstools/utilities": ["@csstools/utilities@3.0.0", "", { "peerDependencies": { "postcss": "^8.4" } }, "sha512-etDqA/4jYvOGBM6yfKCOsEXfH96BKztZdgGmGqKi2xHnDe0ILIBraRspwgYatJH9JsCZ5HCGoCst8w18EKOAdg=="],
+    "@citizenfx/server": ["@citizenfx/server@2.0.38621-1", "", {}, "sha512-XtPcr6k85Lz1DS2pljboYGiobAcRkuL6WYEhfkwMwi7nf5YxHxzjtWtxPWLGuTrXAu4fNxYFFJ6jxmZlFHOipg=="],
 
     "@esbuild/aix-ppc64": ["@esbuild/aix-ppc64@0.28.2", "", { "os": "aix", "cpu": "ppc64" }, "sha512-XExcO+dvLKvVtNTibSTBej1NCAbaGhWn9Ww1ZPx80qsahhPFe/8jgWP0IchNe0F3HwkU7n8ejhH8bjonqht8mQ=="],
 
@@ -2328,10 +2259,6 @@
 
     "postcss": ["postcss@8.5.32", "", { "dependencies": { "nanoid": "^3.3.20", "picocolors": "^1.1.1", "source-map-js": "^1.2.2" } }, "sha512-LJlKCCAUFKOuZxipUdYw1NzIITEsPcgyOG9LkvRJvuKj/bRzbuRY0ARXvL0pWGpsZvn8jku+LMep2eU0seHp8g=="],
 
-    "postcss-color-functional-notation": ["postcss-color-functional-notation@8.0.16", "", { "dependencies": { "@csstools/css-color-parser": "^4.2.7", "@csstools/css-parser-algorithms": "^4.0.2", "@csstools/css-tokenizer": "^4.0.2", "@csstools/postcss-progressive-custom-properties": "^5.1.5", "@csstools/utilities": "^3.0.0" }, "peerDependencies": { "postcss": "^8.4" } }, "sha512-ye2cKktM/gscZGusthcJMMP2mCF8DngxZuECudDLlXrlj61PQPpRUHZEzw2Oc+8oKyr413RpP7/7u/O7I5LU9A=="],
-
-    "postcss-value-parser": ["postcss-value-parser@4.2.0", "", {}, "sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ=="],
-
     "prettier": ["prettier@3.9.10", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA=="],
 
     "prettier-plugin-tailwindcss": ["prettier-plugin-tailwindcss@0.8.1", "", { "peerDependencies": { "@ianvs/prettier-plugin-sort-imports": "*", "@prettier/plugin-hermes": "*", "@prettier/plugin-oxc": "*", "@prettier/plugin-pug": "*", "@shopify/prettier-plugin-liquid": "*", "@trivago/prettier-plugin-sort-imports": "*", "@zackad/prettier-plugin-twig": "*", "prettier": "^3.0", "prettier-plugin-astro": "*", "prettier-plugin-css-order": "*", "prettier-plugin-jsdoc": "*", "prettier-plugin-marko": "*", "prettier-plugin-multiline-arrays": "*", "prettier-plugin-organize-attributes": "*", "prettier-plugin-organize-imports": "*", "prettier-plugin-sort-imports": "*", "prettier-plugin-svelte": "*" }, "optionalPeers": ["@ianvs/prettier-plugin-sort-imports", "@prettier/plugin-hermes", "@prettier/plugin-oxc", "@prettier/plugin-pug", "@shopify/prettier-plugin-liquid", "@trivago/prettier-plugin-sort-imports", "@zackad/prettier-plugin-twig", "prettier-plugin-astro", "prettier-plugin-css-order", "prettier-plugin-jsdoc", "prettier-plugin-marko", "prettier-plugin-multiline-arrays", "prettier-plugin-organize-attributes", "prettier-plugin-organize-imports", "prettier-plugin-sort-imports", "prettier-plugin-svelte"] }, "sha512-iaFMYqDsE4ffdDkn5qup0j5f2aCEBFZrdrZnvu9QKTlWx/iGPeQ4HHu7b7fCPMxeo9nwQBiOAh2nSypdFYWJkw=="],
@@ -2443,6 +2370,170 @@
     "@tailwindcss/oxide-wasm32-wasi/@tybys/wasm-util": ["@tybys/wasm-util@0.10.4", "", { "dependencies": { "tslib": "^2.4.0" }, "bundled": true }, "sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A=="],
 
     "@tailwindcss/oxide-wasm32-wasi/tslib": ["tslib@2.8.1", "", { "bundled": true }, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "__NAME__/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "__NAME__/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-admin/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-admin/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-appearance/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-appearance/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-banking/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-banking/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-chat/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-chat/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-cityhall/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-cityhall/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-core/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-core/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-death/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-death/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-doorlock/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-doorlock/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-drugs/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-drugs/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-exitsleeping/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-exitsleeping/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-fuel/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-fuel/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-garages/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-garages/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-hud/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-hud/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-inventory/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-inventory/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-jobs/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-jobs/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-lib/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-lib/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-loading/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-loading/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-management/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-management/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-mechanic/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-mechanic/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-mysql/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-mysql/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-pawnshop/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-pawnshop/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-pedscale/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-pedscale/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-police/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-police/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-policealert/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-policealert/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-prison/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-prison/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-properties/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-properties/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-radialmenu/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-radialmenu/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-rental/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-rental/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-robberies/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-robberies/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-scoreboard/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-scoreboard/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-sirens/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-sirens/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-smallresources/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-smallresources/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-streetraces/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-streetraces/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-target/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-target/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-vehiclekeys/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-vehiclekeys/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-vehicles/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-vehicles/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-vehiclesales/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-vehiclesales/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-vehicleshop/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-vehicleshop/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-voice/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-voice/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
+
+    "ai-weathersync/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
+
+    "ai-weathersync/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
 
     "micromatch/picomatch": ["picomatch@2.3.2", "", {}, "sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA=="],
 
