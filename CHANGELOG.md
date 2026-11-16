@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.5.2](https://github.com/aifivem/aicore-server/compare/v0.5.1...v0.5.2) (2026-11-16)
+
+
+### Bug Fixes
+
+* **claude:** native lookup reads the docs site's CFX natives and marks Enhanced-only ones ([fd699d5](https://github.com/aifivem/aicore-server/commit/fd699d538910cf452a9bc2c8a946088243abb08d))
+
+
+### Documentation
+
+* ai-voice per-player range on Enhanced ([8f3a454](https://github.com/aifivem/aicore-server/commit/8f3a4547b8f66fd17dd1a5a425a1d1a9e6384453))
+* **claude:** Enhanced wheel indexes, BOOL marshalling evidence, colshape notes ([75d6fe1](https://github.com/aifivem/aicore-server/commit/75d6fe188712ce7c9a9e21207ab0bfdc1970eb4e))
+* **claude:** FiveM Enhanced patch notes, server vehicle natives, colshapes and limits in the aicore-fivem skill ([93ecb18](https://github.com/aifivem/aicore-server/commit/93ecb18b8ac9589d90a8d379117c87025b684059))
+* **claude:** latent events break the docs' source 65535 check ([5c01dd4](https://github.com/aifivem/aicore-server/commit/5c01dd4c4198d5f34b3a5d4bbfb39b3322fd7184))
+* **claude:** lib enhanced helpers, BOOL results read as truthy, colshapes on Legacy, native lookup marks server-side Enhanced natives ([36f9aa7](https://github.com/aifivem/aicore-server/commit/36f9aa7845a2a7318eb8231746682ecab328b72d))
+* **claude:** per-frame, distance and CfxLua performance rules ([6243fec](https://github.com/aifivem/aicore-server/commit/6243fec63f569f1de42a14feb3cb4176a1e3c960))
+* colshape event delivery, routing buckets and create cost ([eb62b65](https://github.com/aifivem/aicore-server/commit/eb62b65e8a6d57adbd32b2dc70d40909b5fe7c98))
+* colshapes run on Legacy too (backport 2026-07-23), lib colshape API ([e6b3de0](https://github.com/aifivem/aicore-server/commit/e6b3de08e7a79905c66ef408644bd6f1aabaa17d))
+
 ## [0.5.1](https://github.com/aifivem/aicore-server/compare/v0.5.0...v0.5.1) (2026-11-15)
 
 
