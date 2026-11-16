@@ -6,7 +6,7 @@ Sources (cached in tools/natives-cache, refreshed when older than 14 days or wit
   natives.lua       https://static.cfx.re/natives/natives.lua            GTA natives as FiveM defines them
                                                                           (names, aliases, args; the Lua runtime
                                                                           is generated from this)
-  natives_cfx.json  https://runtime.fivem.net/doc/natives_cfx.json       CFX natives (statebags, handling,
+  natives_cfx.json  https://static.cfx.re/natives/natives_cfx.json       CFX natives (statebags, handling,
                                                                           server natives...) with apiset
   alloc8or.json     alloc8or/gta5-nativedb-data natives.json             research names, cross check only
 
@@ -31,7 +31,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "natives-cache")
 SOURCES = {
     "natives.lua": "https://static.cfx.re/natives/natives.lua",
-    "natives_cfx.json": "https://runtime.fivem.net/doc/natives_cfx.json",
+    "natives_cfx.json": "https://static.cfx.re/natives/natives_cfx.json",
     "alloc8or.json": "https://raw.githubusercontent.com/alloc8or/gta5-nativedb-data/master/natives.json",
 }
 MAX_AGE = 14 * 24 * 3600
@@ -187,6 +187,8 @@ def main():
                 lua.append(lua_name(x))
         where = n["kind"] if n["kind"] == n["ns"] else "%s %s" % (n["kind"], n["ns"])
         print("%s  (%s, %s)" % (lua[0], where, n["apiset"]))
+        if "only works in FiveM for GTAV Enhanced" in n["doc"]:
+            print("  !! Enhanced only: not on a Legacy server (references/enhanced.md)")
         print("  name   %s   hash %s" % (n["name"], n["hash"]))
         if len(lua) > 1:
             print("  also   %s" % ", ".join(lua[1:]))
