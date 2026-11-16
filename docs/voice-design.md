@@ -108,6 +108,7 @@ server                                            client
 - **Several frequencies**: a player hears every joined frequency (panel limit, default 3) and talks on the active one. pma's single radio is the active frequency. Job frequencies (panel spans with jobs and an on-duty switch) are checked on join and again on job, duty and character changes and on a panel change.
 - **Ranges**: clients pick only the panel's ranges; a client's custom range is taken on Mumble and refused on Enhanced; server scripts set any range (`setPlayerRange`).
 - **Enhanced backend** (server routes audio):
+  - Proximity with `SetPlayerVoiceProximityRange` (Enhanced build 177+, probed at start): one spatial channel per routing bucket, maxDistance `RANGE_MAX`, every player unmuted in it and their range set on the player (it only shortens how far they are heard). Older Enhanced builds:
   - Proximity: one spatial channel per (routing bucket, distance). Every player is a member of all channels of their bucket and unmuted only in the one of their range. A custom range gets its own channel, deleted when nobody uses it. A 1 s server timer moves players whose routing bucket changed (FiveM has no bucket event).
   - Each frequency is a 2D channel, members muted until push-to-talk on their active frequency. Each call is a 2D channel. Loudspeaker bystanders join the call's channel (muted unless the call hears them).
   - Admin mute: muted in every channel.

@@ -51,7 +51,7 @@ What FiveM for GTAV Enhanced (early access, server `cfx-server`) adds or changes
 - The proximity range sets how far a player is heard, as on Legacy.
 - `SetPlayerVoiceProximityRange(playerSrc, range)` (server) shortens how far one player is heard in every spatial channel: the smaller of this range and the channel's `maxDistance`; 0 uses the channel's distance. It does not change how far the player hears others.
 - Voice relevancy follows OneSync relevancy.
-- ai-voice's Enhanced router (`server/routing/enhanced.ts`, one spatial channel per range) was written before b177.
+- ai-voice uses it (`server/routing/enhanced.ts`): with the native one spatial channel per routing bucket (maxDistance `RANGE_MAX`) and each player's range on the player; without it (older Enhanced builds) the old one channel per range. The probe calls it for server id 0 inside `try`.
 
 ## Events
 
