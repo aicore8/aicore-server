@@ -48,7 +48,7 @@ What the official documentation (docs.fivem.net) says that affects how we build,
 - `source` is only valid until the first `Wait` / `await`; copy it to a local first.
 - Security convars (most on by default since build 8450): `sv_kick_players_cnl_timeout_sec`, `sv_pure_verify_client_settings`, `sv_authMaxVariance` (1-5, default 5, lower = more stable ids), `sv_authMinTrust` (1-5, default 1), `sv_filterRequestControl`, `sv_disableClientReplays` (also disables the Rockstar Editor).
 - `sv_filterRequestControl`: `0` off, `1` blocks settled player-occupied vehicles, `2` all player-controlled entities, `3` also settled non-player entities, `4` stops routing control requests entirely, `-1` like 2 plus a warning.
-- `sv_entityLockdown`: `inactive` (default), `relaxed` (script-owned client entities blocked), `strict` (no client entities), `full` (also no dummy objects; Enhanced only).
+- `sv_entityLockdown`: `inactive` (default), `relaxed` (script-owned client entities blocked), `strict` (no client entities), `full` (also no dummy objects; Enhanced only, where the patch notes call the value `no_dummy`).
 - Others: `sv_pureLevel 1|2`, `sv_requestParanoia 0-3` (proxied HTTP floods), `sv_scriptHookAllowed false`, `rcon_password` (empty disables RCON).
 - `sv_endpointPrivacy` is removed (the docs page still lists it): FXServer no longer exposes player endpoint addresses on any HTTP endpoint and warns when the convar is set **[server log, 2026-10-29]**.
 - `sv_projectName`, `sv_projectDesc`, `tags`, `locale`, `banner_detail`, `banner_connecting` are no longer read: server list metadata lives in the Cfx Portal since 2026-10-21 **[server log + cfx forum]**.
@@ -94,6 +94,7 @@ What the official documentation (docs.fivem.net) says that affects how we build,
 - Breaking: player IDs are reused; KVP database files need migration; remote command output needs `PrintRemoteCommandLog`; resources can no longer be builders; pure mode always on; `stream_enhanced/` replaces `stream/` when present (Gen8 assets in `stream`, Gen9 in `stream_enhanced`).
 - State bags on Enhanced: change callbacks fire only if the entity exists; values replicate only when explicitly set.
 - → Write for both: no id-reuse assumptions, no resource builders (we ship built `dist/`), entity-existence checks in state bag handlers.
+- What the Enhanced patch notes add (server vehicle natives, colshapes, events, limits) and where to read new ones: `enhanced.md`.
 
 ## Debugging
 

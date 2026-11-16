@@ -18,6 +18,7 @@ Every read repeats all of it. On a busy server the map lock is shared with the n
 - As soon as **any** resource has a change handler, every `SetKey` unpacks the value, and on the server it is queued to the main thread: a read right after a set returns the old value (issue #3930).
 - Change handlers are one engine-wide event: every handler of every resource is tested (key and bag name string compare) on every change; a matching one is called into the runtime with the decoded value. The handlers run **before** the value is stored, so reading the bag inside a handler gives the old value.
 - A handler with an empty key (`""`) is called for every change of its bag filter; with an empty bag filter for every bag. Keep wildcard handlers to one per resource on the global bag (lib `GlobalGroup`).
+- Size: a value holds at most 32 KB per key on Enhanced, and the server warns above 1 KB per value or 256 characters per key name (patch notes 2026-09-30, `enhanced.md`). Keep values far below 1 KB; larger data goes through targeted events.
 
 ## Entities
 
