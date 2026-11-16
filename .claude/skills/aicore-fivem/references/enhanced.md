@@ -19,6 +19,8 @@ What FiveM for GTAV Enhanced (early access, server `cfx-server`) adds or changes
 ## Calling Enhanced-only natives and gating them
 
 - Enhanced-only natives are in neither `@citizenfx/server` nor the typings. Call them by hash; a CFX native's hash is the joaat of its upper-case name (`CREATE_VOICE_CHANNEL` = `0x7A70A736`, `SET_VEHICLE_ENGINE_HEALTH` = `0x1B760FB5`) **[docs]**; take the hash from `native.py`, never compute it by hand in a script. Float arguments get FiveM's `+ 0.0000001`, or an integral value arrives as an int (ai-voice `server/routing/natives.ts`).
+- Scripts never call these hashes themselves: lib server `enhanced` holds them behind its probes (null / false on Legacy). Where ai-* uses it: ai-vehicles / ai-garages store and restore windows, tyres, wheels, lights, bumpers and tank (`damage` column; deformation is left out, rfc #649), ai-mechanic writes repairs from the server as well as through the owner client, ai-prison catches escapes at the area's colshape exit (the 10 s check stays).
+- BOOL results come back as `1` / `0` in JS (`engine.md`): read every Enhanced BOOL as truthy, never `=== true` or `typeof === "boolean"` (a type probe stays false on Enhanced too). Probe a by-hash native by "the call did not throw", on an entity a client owns.
 - Gate by feature, never by a version string: probe once at start and cache the answer. ai-voice's probe creates two voice channels inside `try`; a Legacy server throws on the unknown hash.
 - Without the feature the existing path stays, unchanged: Legacy servers keep working on the same code.
 - Lua on Enhanced resolves a missing global by name on first use (`Citizen.LoadNative` in the `_G` metatable) **[binary]**, so a Lua bridge checks `if SetVehicleFixed then` before calling.
@@ -38,7 +40,7 @@ What FiveM for GTAV Enhanced (early access, server `cfx-server`) adds or changes
 
 ## Server colshapes
 
-**[docs]** Enhanced only: `CreateColshapeSphere` / `Circle` / `Cuboid` / `Cylinder` / `Polygon` / `Rectangle` (shared natives) return an id. The server events `onColshapeEnter` / `onColshapeExit` arrive with the entity handle and the colshape id. `SetColshapeEntityType` picks which entity types count, `SetColshapeDimension` the routing bucket. `IsPointInsideColshape` tests a point. `CreateColshapePolygon` takes a plain array of points from JS and Lua.
+**[docs]** Enhanced only per the docs, but the Legacy artifact 38055 (2026-10-30) ships the colshape wrappers and `ColshapeManager` too: colshapes are no Enhanced probe; lib `enhanced.hasColshapes` only checks that a test shape exists. `CreateColshapeSphere` / `Circle` / `Cuboid` / `Cylinder` / `Polygon` / `Rectangle` (shared natives) return an id. The server events `onColshapeEnter` / `onColshapeExit` arrive with the entity handle and the colshape id. `SetColshapeEntityType` picks which entity types count, `SetColshapeDimension` the routing bucket. `IsPointInsideColshape` tests a point. `CreateColshapePolygon` takes a plain array of points from JS and Lua.
 
 ## Voice
 

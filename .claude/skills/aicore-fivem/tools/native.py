@@ -189,6 +189,8 @@ def main():
         print("%s  (%s, %s)" % (lua[0], where, n["apiset"]))
         if "only works in FiveM for GTAV Enhanced" in n["doc"]:
             print("  !! Enhanced only: not on a Legacy server (references/enhanced.md)")
+        elif "In FiveM for GTAV Enhanced, this native is also available on the server" in n["doc"]:
+            print("  !! server side only on Enhanced (references/enhanced.md)")
         print("  name   %s   hash %s" % (n["name"], n["hash"]))
         if len(lua) > 1:
             print("  also   %s" % ", ".join(lua[1:]))
