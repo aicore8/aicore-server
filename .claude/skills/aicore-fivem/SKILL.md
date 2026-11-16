@@ -24,7 +24,7 @@ The project's own rules come first: `CLAUDE.md` (goals, process), `.claude/rules
 | `references/statebags.md` | State bags: engine read / write costs and timing (from the FiveM source), entity pitfalls, the lib mirror classes, which channel for which data |
 | `references/events.md` | Game and engine events instead of polling: vehicle enter, damage, entity created / removed, death, scope events and their cost, OneSync facts |
 | `references/docs.md` | Findings from the official FiveM docs: manifest, sandbox, ids, OneSync, security, server events, ACL, convars, NUI, game features worth using |
-| `references/enhanced.md` | FiveM for GTAV Enhanced: the citizenfx/rfc patch notes and bug reports (links, how to read new ones), Enhanced-only server natives (vehicle damage / health, colshapes, voice range) and how to gate them, new events, limits, assets |
+| `references/enhanced.md` | FiveM for GTAV Enhanced: the citizenfx/rfc patch notes and bug reports (links, how to read new ones), Enhanced-only server natives (vehicle damage / health, voice range), colshapes (also on Legacy) and how to gate them, new events, limits, assets |
 | `references/data.md` | Where each kind of data lives, the three write paths, distribution to clients, data between resources, in-memory structures (the reasoning behind `.claude/rules/data-and-sync.md`) |
 | `references/scale.md` | The stress test (1M players in the DB, 10k online): what was slow, what changed, numbers, known limits |
 

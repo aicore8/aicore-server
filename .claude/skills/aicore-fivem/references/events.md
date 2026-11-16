@@ -16,7 +16,7 @@ Use an event the engine already sends before writing a poll. Sources: docs.fivem
 - `entityCreating (entity)` (cancelable with `CancelEvent`), `entityCreated (entity)`, `entityRemoved (entity)`: every networked entity under OneSync; check `GetEntityPopulationType` to tell script entities from ambient ones.
 - `weaponDamageEvent (sender, data)`, `startProjectileEvent`, `ptFxEvent`, `explosionEvent`: client-reported game events, cancelable; the base for anti-cheat checks.
 - `onPedDeath`: FXServer 38039+ death of a player ped; ai-core turns it into `CORE.playerDiedEvent (src, killer, weaponHash)`. Enhanced also sends `onPedHealthChanged` (health / armour changes with attacker and weapon) and `onPlayerNameChanged`.
-- `onColshapeEnter` / `onColshapeExit (entity, colshapeId)`: server colshapes, Enhanced only (`enhanced.md`).
+- `onColshapeEnter` / `onColshapeExit (entity, colshapeId)`: colshapes on both sides and both builds, sent to every resource (`enhanced.md` "Colshapes"; lib `onColshape`).
 - `playerJoining (oldId)`, `playerDropped (reason)`, `playerConnecting` (deferrals: ai-core's connection gate, `AddConnectionCheck`).
 - `playerEnteredScope` / `playerLeftScope ({ for, player })`: the OneSync docs warn the cost grows with the players in scope; only ai-core listens (`resource/server/scopes.ts`), resources call lib `playersNear` / `playersNearEntity` (export `GetPlayersInScope`).
 
