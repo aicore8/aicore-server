@@ -54,4 +54,4 @@ Found, not added:
 | okokPhone | its docs are a Notion site that cannot be read; API not verified |
 | cylex_phone, sky_phone | only seen in other scripts' integrations, no docs read |
 
-A new phone: a file in `server/phone/adapters/` exporting a `PhoneAdapter` (`@aifivem/shared` `phone.ts`) and a line in `server/phone/index.ts`; its open signal a file in `client/phone/adapters/` exporting a `PhoneClientAdapter` (`watch` on its documented event or state bag) and a line in `client/phone/index.ts`, in the same order.
+A new phone: a file in `server/phone/adapters/` exporting a `PhoneAdapter` (`@aicore8/shared` `phone.ts`) and a line in `server/phone/index.ts`; its open signal a file in `client/phone/adapters/` exporting a `PhoneClientAdapter` (`watch` on its documented event or state bag) and a line in `client/phone/index.ts`, in the same order.

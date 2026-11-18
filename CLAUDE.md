@@ -20,8 +20,8 @@ When they conflict, the higher one wins. A skill rule that does not apply here g
 
 - Scripts: TypeScript, each resource follows the overextended/fivem-ts layout (bun, tsdown, oxlint, Prettier; `resource/{client,server,common}`, `locales/`, `public/`, `web/`). Details: `.claude/rules/resource-structure.md`.
 - Bridge: part of ai-core, no separate bridge resources (owner decision). ai-core `provide`s `es_extended`, `qb-core` and `qbx_core` and answers their exports, core objects and events, so another script uses ai-core as if it were that framework. The bridge code lives in ai-core's `bridge/` folder, Lua 5.4 with full LuaLS annotations (`.claude/rules/lua-bridges.md`). The only other Lua is ai-lib's Lua side (`resources/[ai]/ai-lib/lua/`), the lib for Lua resources.
-- Shared code: our own `@aifivem/lib` (callbacks, locale, waitFor, streaming, keybinds, rate limits, DB tables...), **no ox_lib in ai-* resources** (owner decision). Anything used twice goes into the lib (`.claude/rules/lib.md`).
-- DB: our own engine `@aifivem/mysql` (owner decision): every ai-* resource runs a small pool in-process; `ai-mysql` stands in for oxmysql for third-party scripts (`.claude/rules/database.md`). Never guess a signature: read the source or `.d.ts` in `node_modules`.
+- Shared code: our own `@aicore8/lib` (callbacks, locale, waitFor, streaming, keybinds, rate limits, DB tables...), **no ox_lib in ai-* resources** (owner decision). Anything used twice goes into the lib (`.claude/rules/lib.md`).
+- DB: our own engine `@aicore8/mysql` (owner decision): every ai-* resource runs a small pool in-process; `ai-mysql` stands in for oxmysql for third-party scripts (`.claude/rules/database.md`). Never guess a signature: read the source or `.d.ts` in `node_modules`.
 - NUI: the `aicore-ui` stack: React 19 + Vite + TypeScript, Tailwind v4, shadcn/ui (Radix), TanStack Router / Virtual / Pacer, Redux Toolkit, `motion`, `fivem-nui-react` (`.claude/rules/nui.md`).
 - Third-party resources (owner decision, each one asked for): bob74_ipl (GTA Online interiors the ai-* places use), sd-phone with sd-phone-props (the server's phone; every ai-* script reaches it through ai-core's phone layer, which picks it up from its `provide 'lb-phone'`), and ox_lib, which sd-phone needs. Voice is ai-voice, which stands in for pma-voice; no oxmysql: `ai-mysql` provides it. **No ai-* resource uses ox_lib** (owner decision): it is on the server for third-party scripts only. Ask before adding another resource or npm package.
 
@@ -29,7 +29,7 @@ When they conflict, the higher one wins. A skill rule that does not apply here g
 
 - This folder (`txData/ai-core.base`) is the server data folder, the server repo and the bun workspace root: cfg files, docs, rules, tools, `template/`. Its `node_modules` stays outside `resources/` so FXServer never scans it.
 - `resources/[standalone]/`: third-party resources the server ships with (bob74_ipl), not in git; the txAdmin recipe downloads each one listed in `STANDALONE` in `tools/recipe.ts`.
-- `resources/[ai]/`: **every `ai-*` resource is its own git repo**. `packages/` is one more repo: the npm packages `@aifivem/build`, `@aifivem/lib`, `@aifivem/mysql`, `@aifivem/shared`; bun links the local copies inside the workspace. The server repo ignores both.
+- `resources/[ai]/`: **every `ai-*` resource is its own git repo**. `packages/` is one more repo: the npm packages `@aicore8/build`, `@aicore8/lib`, `@aicore8/mysql`, `@aicore8/shared`; bun links the local copies inside the workspace. The server repo ignores both.
 - New resource: `bun run new <name> "<description>"` in this folder (creates `resources/[ai]/ai-<name>` from `template/resource`), then `bun install`, `bun run build` in the new folder, `git init`, and `ensure ai-<name>` in `server.cfg`.
 
 ## Product decisions

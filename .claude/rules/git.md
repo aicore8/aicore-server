@@ -4,7 +4,7 @@ The owner's standing rules; follow them without being asked.
 
 ## Repositories
 
-- One change usually touches several repos: the server folder (aicore-server), `packages/` (aicore-packages), every `resources/[ai]/ai-*`, the org repo (`C:\TGIANN\FivemServers\ai-core\org-github`, `aifivem/.github`: shared workflows, profile), the docs (`C:\TGIANN\aifivem-site\content\docs`, `aifivem/docs`) and the private site (`C:\TGIANN\aifivem-site`). Each is committed on its own, from inside its folder.
+- One change usually touches several repos: the server folder (aicore-server), `packages/` (aicore-packages), every `resources/[ai]/ai-*`, the org repo (`C:\TGIANN\FivemServers\ai-core\org-github`, `aicore8/.github`: shared workflows, profile), the docs (`C:\TGIANN\aicore8-site\content\docs`, `aicore8/docs`) and the private site (`C:\TGIANN\aicore8-site`). Each is committed on its own, from inside its folder.
 - Git Bash: `cd` into a folder with `[ai]` in its path first (`git -C` fails there).
 
 ## When to commit (no need to ask)

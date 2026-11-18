@@ -1,4 +1,4 @@
-# Typecheck, lint and build on every pull request and push to main: see aifivem/.github.
+# Typecheck, lint and build on every pull request and push to main: see aicore8/.github.
 name: check
 
 on:
@@ -15,4 +15,4 @@ concurrency:
 
 jobs:
   check:
-    uses: aifivem/.github/.github/workflows/check.yml@main
+    uses: aicore8/.github/.github/workflows/check.yml@main

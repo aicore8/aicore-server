@@ -8,7 +8,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const OWNER = "aifivem";
+const OWNER = "aicore8";
 const SERVER_REPO = `https://github.com/${OWNER}/aicore-server`;
 const SHARED = ["security.cfg", "misc.cfg", "permission.cfg"];
 /** ai-core's `fxDependencies` `/server:<build>`: txAdmin refuses an older FXServer before installing anything. */

@@ -12,25 +12,25 @@
       },
     },
     "packages/build": {
-      "name": "@aifivem/build",
-      "version": "0.2.1",
+      "name": "@aicore8/build",
+      "version": "0.2.2",
       "bin": {
-        "aicore-client-errors": "./clientErrors.ts",
-        "aicore-db-types": "./dbTypes.ts",
+        "aicore-client-errors": "clientErrors.ts",
+        "aicore-db-types": "dbTypes.ts",
       },
       "dependencies": {
-        "@aifivem/shared": "^0.5.0",
+        "@aicore8/shared": "^0.8.0",
       },
       "devDependencies": {
         "@types/bun": "latest",
       },
     },
     "packages/lib": {
-      "name": "@aifivem/lib",
-      "version": "0.8.0",
+      "name": "@aicore8/lib",
+      "version": "0.9.0",
       "dependencies": {
-        "@aifivem/mysql": "^0.2.0",
-        "@aifivem/shared": "^0.7.0",
+        "@aicore8/mysql": "^0.2.0",
+        "@aicore8/shared": "^0.8.0",
       },
       "devDependencies": {
         "@citizenfx/client": "latest",
@@ -39,7 +39,7 @@
       },
     },
     "packages/mysql": {
-      "name": "@aifivem/mysql",
+      "name": "@aicore8/mysql",
       "version": "0.2.0",
       "dependencies": {
         "mysql2": "3.24.5",
@@ -50,8 +50,8 @@
       },
     },
     "packages/shared": {
-      "name": "@aifivem/shared",
-      "version": "0.7.0",
+      "name": "@aicore8/shared",
+      "version": "0.8.0",
       "devDependencies": {
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
@@ -61,11 +61,11 @@
       "name": "ai-admin",
       "version": "0.4.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -80,14 +80,14 @@
     },
     "resources/[ai]/ai-appearance": {
       "name": "ai-appearance",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -104,7 +104,7 @@
       "name": "ai-appearance-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -135,14 +135,14 @@
     },
     "resources/[ai]/ai-banking": {
       "name": "ai-banking",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -159,7 +159,7 @@
       "name": "ai-banking-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -190,13 +190,13 @@
     },
     "resources/[ai]/ai-chat": {
       "name": "ai-chat",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -213,7 +213,7 @@
       "name": "ai-chat-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -244,13 +244,13 @@
     },
     "resources/[ai]/ai-cityhall": {
       "name": "ai-cityhall",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -267,7 +267,7 @@
       "name": "ai-cityhall-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
+        "@aicore8/lib": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -290,14 +290,14 @@
     },
     "resources/[ai]/ai-core": {
       "name": "ai-core",
-      "version": "0.6.1",
+      "version": "0.6.3",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -314,7 +314,7 @@
       "name": "ai-core-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -346,13 +346,13 @@
     },
     "resources/[ai]/ai-death": {
       "name": "ai-death",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -369,7 +369,7 @@
       "name": "ai-death-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -402,11 +402,11 @@
       "name": "ai-doorlock",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -423,12 +423,12 @@
       "name": "ai-drugs",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -445,12 +445,12 @@
       "name": "ai-exitsleeping",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -467,11 +467,11 @@
       "name": "ai-fuel",
       "version": "0.2.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -486,13 +486,13 @@
     },
     "resources/[ai]/ai-garages": {
       "name": "ai-garages",
-      "version": "0.3.0",
+      "version": "0.3.2",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -509,7 +509,7 @@
       "name": "ai-garages-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -540,13 +540,13 @@
     },
     "resources/[ai]/ai-hud": {
       "name": "ai-hud",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -563,7 +563,7 @@
       "name": "ai-hud-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -594,14 +594,14 @@
     },
     "resources/[ai]/ai-inventory": {
       "name": "ai-inventory",
-      "version": "0.5.0",
+      "version": "0.6.2",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -618,7 +618,7 @@
       "name": "ai-inventory-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -651,11 +651,11 @@
       "name": "ai-jobs",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -670,13 +670,13 @@
     },
     "resources/[ai]/ai-lib": {
       "name": "ai-lib",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -693,7 +693,7 @@
       "name": "ai-lib-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -720,13 +720,13 @@
     },
     "resources/[ai]/ai-loading": {
       "name": "ai-loading",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -743,7 +743,7 @@
       "name": "ai-loading-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -770,11 +770,11 @@
       "name": "ai-management",
       "version": "0.2.2",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -789,13 +789,13 @@
     },
     "resources/[ai]/ai-mechanic": {
       "name": "ai-mechanic",
-      "version": "0.2.4",
+      "version": "0.3.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -812,11 +812,11 @@
       "name": "ai-mysql",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -833,11 +833,11 @@
       "name": "ai-pawnshop",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -854,11 +854,11 @@
       "name": "ai-pedscale",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -875,11 +875,11 @@
       "name": "ai-police",
       "version": "0.3.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -894,13 +894,13 @@
     },
     "resources/[ai]/ai-policealert": {
       "name": "ai-policealert",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -917,7 +917,7 @@
       "name": "ai-policealert-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -948,13 +948,13 @@
     },
     "resources/[ai]/ai-prison": {
       "name": "ai-prison",
-      "version": "0.2.4",
+      "version": "0.3.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -971,12 +971,12 @@
       "name": "ai-properties",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -991,13 +991,13 @@
     },
     "resources/[ai]/ai-radialmenu": {
       "name": "ai-radialmenu",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1014,7 +1014,7 @@
       "name": "ai-radialmenu-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -1047,11 +1047,11 @@
       "name": "ai-rental",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1068,11 +1068,11 @@
       "name": "ai-robberies",
       "version": "0.2.4",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1087,13 +1087,13 @@
     },
     "resources/[ai]/ai-scoreboard": {
       "name": "ai-scoreboard",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1110,7 +1110,7 @@
       "name": "ai-scoreboard-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -1143,11 +1143,11 @@
       "name": "ai-sirens",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1164,11 +1164,11 @@
       "name": "ai-smallresources",
       "version": "0.5.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1185,11 +1185,11 @@
       "name": "ai-streetraces",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1204,13 +1204,13 @@
     },
     "resources/[ai]/ai-target": {
       "name": "ai-target",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1227,7 +1227,7 @@
       "name": "ai-target-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -1255,11 +1255,11 @@
       "name": "ai-vehiclekeys",
       "version": "0.2.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1274,14 +1274,14 @@
     },
     "resources/[ai]/ai-vehicles": {
       "name": "ai-vehicles",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1296,14 +1296,14 @@
     },
     "resources/[ai]/ai-vehiclesales": {
       "name": "ai-vehiclesales",
-      "version": "0.1.5",
+      "version": "0.1.7",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1320,7 +1320,7 @@
       "name": "ai-vehiclesales-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -1351,13 +1351,13 @@
     },
     "resources/[ai]/ai-vehicleshop": {
       "name": "ai-vehicleshop",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1374,7 +1374,7 @@
       "name": "ai-vehicleshop-web",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/shared": "workspace:*",
         "@fontsource/inter": "^5.2.8",
         "@fontsource/unbounded": "^5.3.0",
         "@fortawesome/fontawesome-svg-core": "^7.2.0",
@@ -1405,13 +1405,13 @@
     },
     "resources/[ai]/ai-voice": {
       "name": "ai-voice",
-      "version": "0.1.5",
+      "version": "0.2.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1428,11 +1428,11 @@
       "name": "ai-weathersync",
       "version": "0.1.5",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1449,12 +1449,12 @@
       "name": "__NAME__",
       "version": "0.1.0",
       "dependencies": {
-        "@aifivem/lib": "workspace:*",
-        "@aifivem/mysql": "workspace:*",
-        "@aifivem/shared": "workspace:*",
+        "@aicore8/lib": "workspace:*",
+        "@aicore8/mysql": "workspace:*",
+        "@aicore8/shared": "workspace:*",
       },
       "devDependencies": {
-        "@aifivem/build": "workspace:*",
+        "@aicore8/build": "workspace:*",
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
         "@types/bun": "latest",
@@ -1469,13 +1469,13 @@
     },
   },
   "packages": {
-    "@aifivem/build": ["@aifivem/build@workspace:packages/build"],
+    "@aicore8/build": ["@aicore8/build@workspace:packages/build"],
 
-    "@aifivem/lib": ["@aifivem/lib@workspace:packages/lib"],
+    "@aicore8/lib": ["@aicore8/lib@workspace:packages/lib"],
 
-    "@aifivem/mysql": ["@aifivem/mysql@workspace:packages/mysql"],
+    "@aicore8/mysql": ["@aicore8/mysql@workspace:packages/mysql"],
 
-    "@aifivem/shared": ["@aifivem/shared@workspace:packages/shared"],
+    "@aicore8/shared": ["@aicore8/shared@workspace:packages/shared"],
 
     "@babel/code-frame": ["@babel/code-frame@7.29.7", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.29.7", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw=="],
 
@@ -1515,9 +1515,9 @@
 
     "@babel/types": ["@babel/types@7.29.11", "", { "dependencies": { "@babel/helper-string-parser": "^7.29.11", "@babel/helper-validator-identifier": "^7.29.7" } }, "sha512-WCsemW40Cpc6gouC1SrY6PBaZ+oLRlEVY9XBvZBI7il/HyUrb2nJ505wE1MHEFyDZNnrWDEuy4jL50WVHfTTSQ=="],
 
-    "@citizenfx/client": ["@citizenfx/client@2.0.38621-1", "", {}, "sha512-aneJlHWdNA+Y3XD6d+kLyGl4zp21LBHq6p9WaK5JUqZJzDk7USW4DTgADGswsm1pwp3aeD5frDesx1I3ROvdjw=="],
+    "@citizenfx/client": ["@citizenfx/client@2.0.38781-1", "", {}, "sha512-MzWV1m7xzFHL+g359vHqFa+99w6J4bGU8zNUxNwQCRxcFo+a1MZhKfHF8622GdGbWp9nyPsq02T9QPoMU6DCSw=="],
 
-    "@citizenfx/server": ["@citizenfx/server@2.0.38621-1", "", {}, "sha512-XtPcr6k85Lz1DS2pljboYGiobAcRkuL6WYEhfkwMwi7nf5YxHxzjtWtxPWLGuTrXAu4fNxYFFJ6jxmZlFHOipg=="],
+    "@citizenfx/server": ["@citizenfx/server@2.0.38781-1", "", {}, "sha512-kO08NkspRPP0r5KU9GKEKBrPVGp11b7uzWhEmrMxRaH7CN4sTNcxZpBE8LsuiBptUAXh36HR4ISiGFuUtMSJIQ=="],
 
     "@esbuild/aix-ppc64": ["@esbuild/aix-ppc64@0.28.2", "", { "os": "aix", "cpu": "ppc64" }, "sha512-XExcO+dvLKvVtNTibSTBej1NCAbaGhWn9Ww1ZPx80qsahhPFe/8jgWP0IchNe0F3HwkU7n8ejhH8bjonqht8mQ=="],
 
@@ -2370,170 +2370,6 @@
     "@tailwindcss/oxide-wasm32-wasi/@tybys/wasm-util": ["@tybys/wasm-util@0.10.4", "", { "dependencies": { "tslib": "^2.4.0" }, "bundled": true }, "sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A=="],
 
     "@tailwindcss/oxide-wasm32-wasi/tslib": ["tslib@2.8.1", "", { "bundled": true }, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
-
-    "__NAME__/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "__NAME__/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-admin/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-admin/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-appearance/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-appearance/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-banking/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-banking/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-chat/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-chat/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-cityhall/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-cityhall/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-core/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-core/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-death/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-death/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-doorlock/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-doorlock/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-drugs/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-drugs/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-exitsleeping/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-exitsleeping/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-fuel/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-fuel/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-garages/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-garages/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-hud/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-hud/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-inventory/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-inventory/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-jobs/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-jobs/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-lib/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-lib/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-loading/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-loading/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-management/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-management/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-mechanic/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-mechanic/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-mysql/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-mysql/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-pawnshop/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-pawnshop/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-pedscale/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-pedscale/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-police/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-police/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-policealert/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-policealert/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-prison/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-prison/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-properties/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-properties/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-radialmenu/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-radialmenu/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-rental/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-rental/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-robberies/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-robberies/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-scoreboard/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-scoreboard/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-sirens/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-sirens/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-smallresources/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-smallresources/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-streetraces/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-streetraces/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-target/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-target/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-vehiclekeys/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-vehiclekeys/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-vehicles/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-vehicles/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-vehiclesales/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-vehiclesales/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-vehicleshop/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-vehicleshop/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-voice/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-voice/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
-
-    "ai-weathersync/@citizenfx/client": ["@citizenfx/client@2.0.38055-1", "", {}, "sha512-i9Kcr07DTGeOIxbVNQuZFtib63FgLoNtQNogVBWI+DZwzL9ZilcuvXs/lXb+tz0HJQd2lBFMXltwtqvK/k6CVw=="],
-
-    "ai-weathersync/@citizenfx/server": ["@citizenfx/server@2.0.38055-1", "", {}, "sha512-Kf3nrL9lnYc6Hxvn5G++kiCSNDIKEQHQEftmV+np5z2+OqwmBV7TUf6qklhlXBViozVAxgKkmI6bhpDSqV7F6Q=="],
 
     "micromatch/picomatch": ["picomatch@2.3.2", "", {}, "sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA=="],
 

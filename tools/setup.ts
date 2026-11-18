@@ -7,7 +7,7 @@
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const OWNER = "aifivem";
+const OWNER = "aicore8";
 
 const base = join(import.meta.dir, "..");
 const cfg = readFileSync(join(base, "server.cfg"), "utf8");

@@ -1,4 +1,4 @@
-# Releases come from Conventional Commits on main (feat:, fix:, perf:...): see aifivem/.github.
+# Releases come from Conventional Commits on main (feat:, fix:, perf:...): see aicore8/.github.
 name: release
 
 on:
@@ -11,5 +11,5 @@ permissions:
 
 jobs:
   release:
-    uses: aifivem/.github/.github/workflows/release.yml@main
+    uses: aicore8/.github/.github/workflows/release.yml@main
     secrets: inherit

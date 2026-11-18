@@ -2,11 +2,11 @@
 
 The owner gives nothing: find what is outdated, download it from GitHub, carry the server's state over, build, restart, check.
 
-Two server layouts. A **workspace server** has `packages/` and a root `package.json` with `workspaces` (the maintainer's and developers' setup, `bun run setup`): resources depend on `@aifivem/*` with `workspace:*` and bun links the local packages. A **zip server** was installed by the txAdmin recipe from the release zips: no `packages/`, no root `package.json`; each resource builds alone and gets `@aifivem/*` from npm at the versions its zip pinned.
+Two server layouts. A **workspace server** has `packages/` and a root `package.json` with `workspaces` (the maintainer's and developers' setup, `bun run setup`): resources depend on `@aicore8/*` with `workspace:*` and bun links the local packages. A **zip server** was installed by the txAdmin recipe from the release zips: no `packages/`, no root `package.json`; each resource builds alone and gets `@aicore8/*` from npm at the versions its zip pinned.
 
 ## 1. Find outdated scripts
 
-Every ai-* resource's `package.json` has `version` and `repository` (`github:aifivem/<name>`; the build writes both into `fxmanifest.lua`). ai-core's update check (`resources/[ai]/ai-core/resource/server/versions.ts`) compares them with `releases/latest` on GitHub and prints `<name> <current> is outdated: <latest> is out (<url>)` in the console (also on the admin dashboard, export `GetUpdates`). It only sees started resources and skips those in the panel's `updates.ignore` (ai-core `data/settings.json`), so check every folder yourself:
+Every ai-* resource's `package.json` has `version` and `repository` (`github:aicore8/<name>`; the build writes both into `fxmanifest.lua`). ai-core's update check (`resources/[ai]/ai-core/resource/server/versions.ts`) compares them with `releases/latest` on GitHub and prints `<name> <current> is outdated: <latest> is out (<url>)` in the console (also on the admin dashboard, export `GetUpdates`). It only sees started resources and skips those in the panel's `updates.ignore` (ai-core `data/settings.json`), so check every folder yourself:
 
 ```bash
 cd "resources/[ai]"
@@ -22,7 +22,7 @@ done
 - Without a logged-in `gh`: `curl -s -H "Accept: application/vnd.github+json" https://api.github.com/repos/<owner>/<name>/releases/latest` (60 unauthenticated requests per hour per IP, shared with ai-core's own check).
 - A resource in `updates.ignore` is listed as ignored and updated only when the owner names it.
 - **A working copy ahead of its release is not outdated**: local version above the latest tag, or commits after the latest tag in a clone (the maintainer's own repos). Skip it; never move a folder backwards.
-- On a zip server there is no `packages/`: a resource's zip pins the package versions it needs. On a workspace server `packages/` (`@aifivem/lib`, `shared`, `mysql`, `build`) has no `repository` line: compare each `package.json` version with npm (`npm view @aifivem/<pkg> version`) and with the upstream of `packages/` when it is a clone (`git remote -v`). Update packages first when a new resource release needs a range the local copies do not satisfy, or bun installs the npm copy next to the workspace one.
+- On a zip server there is no `packages/`: a resource's zip pins the package versions it needs. On a workspace server `packages/` (`@aicore8/lib`, `shared`, `mysql`, `build`) has no `repository` line: compare each `package.json` version with npm (`npm view @aicore8/<pkg> version`) and with the upstream of `packages/` when it is a clone (`git remote -v`). Update packages first when a new resource release needs a range the local copies do not satisfy, or bun installs the npm copy next to the workspace one.
 - Read the release notes of every version between current and latest (`gh release view <tag> --repo <repo> --json body,assets,url`): breaking changes, required package versions, migrations, new cfg lines (`ensure`, `add_convar_permission`, ACE), new `provide` names, manual steps.
 
 Show the list (name, current -> latest, notes that need action) and wait for the go unless already given. Update in dependency order: packages, ai-mysql, ai-core, ai-lib, then the rest.
@@ -32,15 +32,15 @@ Show the list (name, current -> latest, notes that need action) and wait for the
 Per resource, two new empty directories in the scratchpad (`update/<name>/old`, `update/<name>/new`):
 
 ```bash
-gh release download <new tag> --repo aifivem/<name> --pattern '<name>-<new tag>.zip' --dir update/<name>/new  # the release zip: build and source
-gh release download <old tag> --repo aifivem/<name> --archive zip --dir update/<name>/old                     # the old tag's source
+gh release download <new tag> --repo aicore8/<name> --pattern '<name>-<new tag>.zip' --dir update/<name>/new  # the release zip: build and source
+gh release download <old tag> --repo aicore8/<name> --archive zip --dir update/<name>/old                     # the old tag's source
 unzip -q update/<name>/new/*.zip -d update/<name>/new/x
 unzip -q update/<name>/old/*.zip -d update/<name>/old/x
 ```
 
 - **New upstream** is the release asset `<name>-<tag>.zip` (built files plus the source; top folder `<name>/`; `<name>-runtime.zip` has no source and is no upstream for the three-way). Releases before 2026-11-02 attach built files only: take the tag's source then (`--archive zip`, top folder `<owner>-<name>-<sha>/`). `dist/` and `fxmanifest.lua` are not in git and are rebuilt anyway.
-- The asset's `package.json` (and `web/package.json`) differs from git on purpose: `@aifivem/*` pinned to `^x.y.z` instead of `workspace:*`, and `"workspaces": ["web"]`. That is no server change: leave those fields out of the three-way and write them for the layout (workspace server: `workspace:*`, no `workspaces`; zip server: the new asset's).
-- **Old upstream** is the tag of the version the server runs (find the tag name style with `gh release list --repo aifivem/<name>`). It is always downloadable, so the three-way always has its base. A local clone that has the tag can use `git show <tag>:<path>` instead (in Git Bash `cd` into the folder first: `git -C` fails on `[ai]` paths).
+- The asset's `package.json` (and `web/package.json`) differs from git on purpose: `@aicore8/*` pinned to `^x.y.z` instead of `workspace:*`, and `"workspaces": ["web"]`. That is no server change: leave those fields out of the three-way and write them for the layout (workspace server: `workspace:*`, no `workspaces`; zip server: the new asset's).
+- **Old upstream** is the tag of the version the server runs (find the tag name style with `gh release list --repo aicore8/<name>`). It is always downloadable, so the three-way always has its base. A local clone that has the tag can use `git show <tag>:<path>` instead (in Git Bash `cd` into the folder first: `git -C` fails on `[ai]` paths).
 - Nothing from these folders is run, installed or built in place.
 
 ## 3. Back up

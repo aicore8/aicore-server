@@ -1,5 +1,5 @@
-import { createDatabaseTables } from "@aifivem/lib/server";
-import { createLogger } from "@aifivem/lib/shared";
+import { createDatabaseTables } from "@aicore8/lib/server";
+import { createLogger } from "@aicore8/lib/shared";
 import { ResourceName } from "common";
 
 const log = createLogger(ResourceName);

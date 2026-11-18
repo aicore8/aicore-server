@@ -1,6 +1,6 @@
 ---
 name: aicore-script-update
-description: Update scripts on an ai-core server to a newer version while keeping the server's own state and changes. Use when the owner asks to update scripts ("update scripts", "update ai-core", "a new version is out", "install these new versions"), when ai-core warns that a script is outdated (console or admin dashboard), or when the owner points at a folder of new script versions. Covers ai-* resources, ai-lib, ai-mysql and the @aifivem packages (found and downloaded from their GitHub releases, nothing needed from the owner) and third-party resources (the owner provides the new files): backups, three-way carry-over of the server's changes (old upstream, ours, new upstream), panel data and secrets, locales, database changes, adapters and compat notes, build, restart, log check and the final report.
+description: Update scripts on an ai-core server to a newer version while keeping the server's own state and changes. Use when the owner asks to update scripts ("update scripts", "update ai-core", "a new version is out", "install these new versions"), when ai-core warns that a script is outdated (console or admin dashboard), or when the owner points at a folder of new script versions. Covers ai-* resources, ai-lib, ai-mysql and the @aicore8 packages (found and downloaded from their GitHub releases, nothing needed from the owner) and third-party resources (the owner provides the new files): backups, three-way carry-over of the server's changes (old upstream, ours, new upstream), panel data and secrets, locales, database changes, adapters and compat notes, build, restart, log check and the final report.
 ---
 
 # Script update on ai-core
@@ -9,7 +9,7 @@ Take each script to its new version as shipped, then carry the server's own stat
 
 | Script | New version comes from | Flow |
 |---|---|---|
-| `ai-*` resources in `resources/[ai]/` (ai-core, ai-lib, ai-mysql included) and `packages/` | Their GitHub releases: each `package.json` has `repository` (`github:aifivem/<name>`); the owner gives nothing | `references/ai-scripts.md` |
+| `ai-*` resources in `resources/[ai]/` (ai-core, ai-lib, ai-mysql included) and `packages/` | Their GitHub releases: each `package.json` has `repository` (`github:aicore8/<name>`); the owner gives nothing | `references/ai-scripts.md` |
 | Any other resource (usually `resources/[standalone]/`) | A folder or zip the owner provides | `references/third-party.md` |
 
 Read the matching reference before changing anything. Both use the same three-way model below.

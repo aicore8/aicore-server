@@ -1,4 +1,4 @@
-import { createLogger } from "@aifivem/lib/shared";
+import { createLogger } from "@aicore8/lib/shared";
 import { ResourceName } from "common";
 
 const log = createLogger(ResourceName);

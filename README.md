@@ -9,7 +9,7 @@ The server data folder of ai-core: a public (GPL-3.0) FiveM framework and script
 | `server.cfg`, `security.cfg`, `misc.cfg`, `permission.cfg` | Server config. Secrets go into `env.cfg` (copy `env.example.cfg`). |
 | `resources/[standalone]/` | Third-party resources the server ships with, downloaded by the txAdmin recipe: bob74_ipl (GTA Online interiors), sd-phone with sd-phone-props (the phone), and ox_lib, which sd-phone needs. `ai-voice` stands in for pma-voice and `ai-mysql` for oxmysql; no ai-* resource uses ox_lib. |
 | `resources/[ai]/` | ai-core resources, each `ai-*` folder its own git repo. |
-| `packages/` | The `@aifivem/*` npm packages (own git repo). |
+| `packages/` | The `@aicore8/*` npm packages (own git repo). |
 | `template/` | Template for new resources (`bun run new <name> "<description>"`). |
 | `tools/setup.ts` | Clones `packages/` and the `ai-*` resources for a development setup: `bun run setup`. |
 | `tools/rcon.ts` | RCON client: `bun run rcon "restart ai-core"`. |
@@ -40,7 +40,7 @@ The project is built so that someone who cannot code can ask an AI to change a s
 
 ## Releases
 
-Every repository (each `ai-*` script, `packages`, this server repo) releases on its own through [release-please](https://github.com/googleapis/release-please) (shared workflow in [aifivem/.github](https://github.com/aifivem/.github)):
+Every repository (each `ai-*` script, `packages`, this server repo) releases on its own through [release-please](https://github.com/googleapis/release-please) (shared workflow in [aicore8/.github](https://github.com/aicore8/.github)):
 
 1. Commit messages follow [Conventional Commits](https://www.conventionalcommits.org): `feat(inventory): drag items between stashes`, `fix: refund the fee when a spawn fails`, `perf:`, `refactor:`, `docs:`, `chore:`. `feat!:` or a `BREAKING CHANGE:` footer marks a breaking change.
 2. On every push to `main` release-please keeps one release pull request open with the next version, `CHANGELOG.md` and the `version` line of `package.json` and `fxmanifest.lua` updated.
