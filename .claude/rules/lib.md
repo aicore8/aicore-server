@@ -5,7 +5,7 @@ paths:
 
 # Shared packages
 
-`packages/` in the server folder (outside `resources/`, so FXServer never sees it) is its own git repo with the `@aicore8` packages, published to npm (account `aicore8`) by its release workflow when a release pull request is merged (trusted publishing, no token). Resources depend on them with `workspace:*`; bun links the local copies inside the workspace (`resource-structure.md`).
+`packages/` in the server folder (outside `resources/`, so FXServer never sees it) is its own git repo with the `@aicore8` packages, published to npm (org `aicore8`, owned by the npm account `tgiann`) by its release workflow when a release pull request is merged (trusted publishing, no token). A brand-new package has no trusted publisher yet: its first version is published by hand from a real terminal (npm's 2FA browser approval does not work from a non-interactive shell), then `npm trust github <name> --file release.yml --repo aicore8/aicore-packages`. The old `@aifivem/*` packages (the name before 2026-11-18; "fivem" is not allowed in the name) stay on npm, deprecated, because old release zips pin them. Resources depend on them with `workspace:*`; bun links the local copies inside the workspace (`resource-structure.md`).
 
 - A `bin` path in a package's `package.json` has no `./` prefix (`"aicore-db-types": "dbTypes.ts"`): `npm publish` drops `./`-prefixed `.ts` bins as invalid (`npm publish --dry-run` shows the warning).
 
