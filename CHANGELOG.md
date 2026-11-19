@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.5.3](https://github.com/aicore8/aicore-server/compare/v0.5.2...v0.5.3) (2026-11-19)
+
+
+### Documentation
+
+* npm org aicore8 owner and first-publish steps ([e8b9441](https://github.com/aicore8/aicore-server/commit/e8b94419d1828cf31d29cf758300db7878195b4f))
+* trusted publisher is set on the npm website ([a826838](https://github.com/aicore8/aicore-server/commit/a82683872272de13b0bd7a99b5132b8dc17d00db))
+
+
+### Miscellaneous Chores
+
+* rename aifivem to aicore8 (aicore8.com, github.com/aicore8, [@aicore8](https://github.com/aicore8) npm scope) ([bc35764](https://github.com/aicore8/aicore-server/commit/bc35764dd7eccf8c046097cf0441d4bf6b7e29ac))
+
 ## [0.5.2](https://github.com/aicore8/aicore-server/compare/v0.5.1...v0.5.2) (2026-11-16)
 
 
